@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce Website Project</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <section id="header">
+        <a href="{{ url_for('home') }}"><img src="{{url_for('static',filename='img/logo.png')}}" class="logo" alt="" /></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('shop') }}">Shop</a></li>
+                <li><a href="{{ url_for('blog') }}">Blog</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                <li id="lg-bag">
+                    <li><a href="{{ url_for('login') }}"><i class="fa-solid fa-user"></i></a></li>
+                    <a href="{{ url_for('cart') }}"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="#" id="close"><i class="fas fa-times"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="{{ url_for('cart') }}"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+            <li><a href="{{ url_for('login') }}"><i class="fa-solid fa-user"></i></a></li>
+        </div>
+    </section>
+
+    <section class="flash-messages">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
+
+    <section id="login_page">
+        <div class="bnr">
+            <h3>FLAT $10 OFF </h3>
+            <h4>+ Free Shipping on 1st Order</h4>
+            <h4>Exclusive Deals Available</h4>
+        </div>
+        <!-- <form>
+            <h4><strong>Login</strong> /  <strong>Signup</strong></h4>
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <input type="email" placeholder="Email">
+            <input type="number" placeholder="Phone Number">
+            <input type="password" placeholder="password">
+            <h5>By continuing,I agree to the <strong>Terms of Used</strong>&<strong>Privacy Policy</strong></h5>
+            <button class="normal">Login</button>
+            <h5>Having trouble logging in? <strong>Get help</strong></h5>
+        </form> -->
+    <div class="container">
+        <div class="buttons">
+            <button id="show-login" onclick="showLogin()">Login</button>
+            <button id="show-signup" onclick="showSignup()">Signup</button>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login-form" class="form-container">
+            <h2>Login</h2>
+            <form action="{{ url_for('login') }}" method="POST">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" name="login-email" required>
+            
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="login-password" required>
+            
+                <button type="submit" class="normal">Login</button>
+            </form>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signup-form" class="form-container" style="display: none;">
+            <h2>Signup</h2>
+            <form action="{{ url_for('signup') }}" method="POST">
+                <label for="signup-name">Name:</label>
+                <input type="text" id="signup-name" name="signup-name" required>
+            
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" name="signup-email" required>
+            
+                <label for="signup-gender">Gender:</label>
+                <select id="signup-gender" name="signup-gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" name="signup-password" required>
+            
+                <button type="submit" class="normal">Signup</button>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    </section>
+    
+</body>
+</html>

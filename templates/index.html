@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce Website Project</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <section id="header">
+        <a href="{{ url_for('home') }}"><img src="{{url_for('static',filename='img/logo.png')}}" class="logo" alt="" /></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="{{ url_for('home') }}">Home</a></li>
+                <!-- <li><a href="{{ url_for('shop') }}">Shop</a></li> -->
+                <li><a href="{{ url_for('blog') }}">Blog</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                <li id="lg-bag">
+                    <li><a href="{{ url_for('login') }}"><i class="fa-solid fa-user"></i></a></li>
+                    <a href="{{ url_for('cart') }}"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="#" id="close"><i class="fas fa-times"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="{{ url_for('cart') }}"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+            <li><a href="{{ url_for('login') }}"><i class="fa-solid fa-user"></i></a></li>
+        </div>
+    </section>
+
+    <section id="hero">
+        <h4>Trade-in-offers</h4>
+        <h2>Super Value deals</h2>
+        <h1>On all products</h1>
+        <p>Save more with coupons & upto 70% off</p>
+        <button><a href="#">Shop Now</a></button>
+    </section>
+
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="{{ url_for('static', filename='img/features/f1.png') }}" alt="Feature Image" />
+            <h6>Free Shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="{{ url_for('static', filename='img/features/f2.png') }}" alt="Feature Image" />
+            <h6>Fast Delivery</h6>
+        </div>
+        <div class="fe-box">
+            <img src="{{ url_for('static', filename='img/features/f3.png') }}" alt="Feature Image" />
+            <h6>Cost Effective</h6>
+        </div>
+        <div class="fe-box">
+            <img src="{{ url_for('static', filename='img/features/f4.png') }}" alt="Feature Image" />
+            <h6>Huge Discount</h6>
+        </div>
+        <div class="fe-box">
+            <img src="{{ url_for('static', filename='img/features/f5.png') }}" alt="Feature Image" />
+            <h6>Happy Sells</h6>
+        </div>
+        <div class="fe-box">
+            <img src="{{ url_for('static', filename='img/features/f6.png') }}" alt="Feature Image" />
+            <h6>Customer Support</h6>
+        </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Featured Products</h2>
+        <p>Summer New Modern Collection</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="{{ url_for('static', filename='img/products/f1.jpg') }}" alt="" />
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="{{ url_for('static', filename='img/products/f2.jpg') }}" alt="" />
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Cartoon Floral Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$80</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="{{ url_for('static', filename='img/products/f3.jpg') }}" alt="" />
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Wild Floral Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$85</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="{{ url_for('static', filename='img/products/f4.jpg') }}" alt="" />
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>White Floral Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$88</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="{{ url_for('static', filename='img/products/f5.jpg') }}" alt="" />
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Blue Floral Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$70</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="{{ url_for('static', filename='img/products/f6.jpg') }}" alt="" />
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Multicolour Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$65</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="{{ url_for('static', filename='img/products/f7.jpg') }}" alt="" />
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Summer Special Pyjamas</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$60</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="{{ url_for('static', filename='img/products/f8.jpg') }}" alt="" />
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Summer Special Pyjamas</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$60</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="banner" class="section-m1">
+        <h4>Repair Services</h4>
+        <h2>Up to <span>70% Off</span> - All T-Shirts & Accessories</h2>
+        <button class="normal">Explore More</button>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>New Arrivals</h2>
+        <p>Summer Collection on New Products</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="{{ url_for('static', filename='img/products/n1.jpg') }}" alt="" />
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="{{ url_for('static', filename='img/products/n2.jpg') }}" alt="" />
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Cartoon Floral Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$80</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="{{ url_for('static', filename='img/products/n3.jpg') }}" alt="" />
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Wild Floral Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$85</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="{{ url_for('static', filename='img/products/n4.jpg') }}" alt="" />
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>White Floral Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$88</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="{{ url_for('static', filename='img/products/n5.jpg') }}" alt="" />
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Blue Floral Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$70</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="{{ url_for('static', filename='img/products/n6.jpg') }}" alt="" />
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Multicolour Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$65</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="{{ url_for('static', filename='img/products/n7.jpg') }}" alt="" />
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Summer Special Pyjamas</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$60</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="{{ url_for('static', filename='img/products/n8.jpg') }}" alt="" />
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Summer Special Pyjamas</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$60</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sm-banner" class="section-p1">
+        <div class="banner-box">
+            <h4>Crazy deals</h4>
+            <h2>buy 1 get 1 free</h2>
+            <span>The best classic dress is on sale on cara</span>
+            <button>Learn More</button>
+        </div>
+        <div class="banner-box banner-2">
+            <h4>spring/summer</h4>
+            <h2>Upcoming Collections</h2>
+            <span>The best classic dress is on sale on cara</span>
+            <button>Learn More</button>
+        </div>
+    </section>
+
+    <section id="banner3">
+        <div class="banner-box b1">
+            <h2>SEASONAL SALE</h2>
+            <h3>Winter Collection - 50% OFF</h3>
+        </div>
+        <div class="banner-box b2">
+            <h2>NEW FOOTWARE COLLECTION</h2>
+            <h3>Spring / Summer 2024</h3>
+        </div>
+        <div class="banner-box b3">
+            <h2>T-SHIRTS</h2>
+            <h3>New Trendy Print</h3>
+        </div>
+
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up for Newsletters</h4>
+            <p>Get E-mail updates about our latest and <span>special offers.</span></hp>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button>Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" class="logo" alt="Logi">
+            <h4>Contact</h4>
+            <p><strong>Address :</strong>Avalahalli, Bengaluru</p>
+            <p><strong>Phone :</strong>+91 73523 2XXXX</p>
+            <p><strong>Hours :</strong>10:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From <strong>App Store</strong>or <strong>Google Play</strong></p>
+            <div class="row">
+                <img src="{{ url_for('static', filename='img/pay/app.jpg') }}" alt="">
+                <img src="{{ url_for('static', filename='img/pay/play.jpg') }}" alt="">
+            </div>
+            <p>SecurePayment Gateways</p>
+            <img src="{{ url_for('static', filename='img/') }}" alt="">
+        </div>
+<div class="copyright">
+    <p>&copy; Designed by Satyam Satyarthi and Vaibhav Kumar
+    </p>
+</div>
+
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a7688c0137.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
